@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CineNest Admin – Reports</title>
+
+  <!-- Load your global theme FIRST -->
+  <link rel="stylesheet" href="home.css">
+
+  <!-- Reports-specific CSS -->
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ===========================
+        HEADER 
+  ============================ -->
+  <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+
+        </div>
+    </header>
+
+
+   
+
+  <!-- ===========================
+        MAIN REPORTS CONTENT
+  ============================ -->
+  <main class="admin-container">
+    <div class="back-button">
+        <a href="dashboard.html"><i class="fa-solid fa-arrow-left"></i> Back to dashboard</a>
+    </div>
+    <div class="page-header">
+      <h1>Reports & Analytics</h1>
+      <p class="small-muted">System insights: user activity, movie performance, and community trends</p>
+    </div>
+
+    <!-- ===========================
+          REPORT SECTION: MOST WATCHED
+    ============================ -->
+    <section class="report-panel">
+      <div class="report-header">
+        <h2>Top 10 Most-Watched Movies</h2>
+        <div class="export-group">
+          <button class="export-btn">CSV</button>
+          <button class="export-btn">PDF</button>
+          <button class="export-btn">Print</button>
+        </div>
+      </div>
+
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Movie</th>
+            <th>Genre</th>
+            <th>Completion Count</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>The Silent Horizon</td>
+            <td>Sci-Fi</td>
+            <td>19,204</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Fading Stars</td>
+            <td>Drama</td>
+            <td>18,012</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nightfall City</td>
+            <td>Action</td>
+            <td>17,488</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===========================
+          HIGHEST RATED
+    ============================ -->
+    <section class="report-panel">
+      <div class="report-header">
+        <h2>Highest-Rated Movies</h2>
+        <div class="export-group">
+          <button class="export-btn">CSV</button>
+          <button class="export-btn">PDF</button>
+          <button class="export-btn">Print</button>
+        </div>
+      </div>
+
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Movie</th>
+            <th>Avg. Rating</th>
+            <th>Total Reviews</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Echoes of Eternity</td>
+            <td>9.4</td>
+            <td>2,194</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>The Broken Sky</td>
+            <td>9.1</td>
+            <td>1,982</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Shadows of Time</td>
+            <td>9.0</td>
+            <td>1,604</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===========================
+          ACTIVE USERS
+    ============================ -->
+    <section class="report-panel">
+      <div class="report-header">
+        <h2>Most Active Users</h2>
+        <div class="export-group">
+          <button class="export-btn">CSV</button>
+          <button class="export-btn">PDF</button>
+          <button class="export-btn">Print</button>
+        </div>
+      </div>
+
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Posts</th>
+            <th>Comments</th>
+            <th>Reviews</th>
+            <th>Total Activity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>ahmed_92</td>
+            <td>54</td>
+            <td>129</td>
+            <td>32</td>
+            <td>215</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>movieGeek</td>
+            <td>40</td>
+            <td>98</td>
+            <td>51</td>
+            <td>189</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===========================
+          POPULAR FORUMS
+    ============================ -->
+    <section class="report-panel">
+      <div class="report-header">
+        <h2>Most Popular Forums</h2>
+        <div class="export-group">
+          <button class="export-btn">CSV</button>
+          <button class="export-btn">PDF</button>
+          <button class="export-btn">Print</button>
+        </div>
+      </div>
+
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Forum Topic</th>
+            <th>Total Threads</th>
+            <th>Total Posts</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Latest Hollywood Releases</td>
+            <td>302</td>
+            <td>4,912</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Fan Theories</td>
+            <td>214</td>
+            <td>3,488</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie Community. Admin Reports | Cine Nest</p>
+  </footer>
+
+</body>
+</html>
+

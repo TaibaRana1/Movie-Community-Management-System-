@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manage Movies & Genres - Cine Nest</title>
+
+ 
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
+
+  <style>
+    /* Layout wrapper same as dashboard */
+    
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Adjust flex in header */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* spacing from nav */
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.search-box button {
+    background-color: var(--accent-light);
+    color: var(--primary);
+    border: none;
+    border-radius: 0 5px 5px 0;
+
+    /* SAME HEIGHT as input */
+    padding: 10px 15px;  /* changed from 6px to 10px */
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+.search-box button:hover {
+    background-color: var(--accent-dark);
+    color: var(--white);
+}
+
+/* Optional: icon spacing */
+.search-box button i {
+    font-size: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-light);
+}
+
+/* Dropdown */
+
+.nav-links li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #c7b7a3;
+    width: fit-content;          
+    white-space: nowrap;      
+    padding: 0;
+    border-radius: 5px;
+    z-index: 999;
+}
+.dropdown-content li {
+    padding: 8px 12px;
+    width: 100%;
+}
+.dropdown-content li a {
+    color: #561c24 !important;   
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;              /* keep open */
+}
+
+
+
+/* Back Button */
+.back-button {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #561c24;
+    background: #fdf6e3;
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-button a:hover {
+    background: #561c24;
+    color: white;
+}
+
+
+    .admin-container {
+      width: 90%;
+      margin: 30px auto;
+      color: var(--primary);
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .panel {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom: 30px;
+    }
+
+    .section-divider {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Movies list table */
+    table.movie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    table.movie-table th,
+    table.movie-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      font-size: 14px;
+      color: #333;
+    }
+
+    table.movie-table th {
+      font-weight: bold;
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-danger {
+      background: #b22222;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-light {
+      background: var(--accent-light);
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid var(--secondary);
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    .genre-tag {
+      background: var(--accent-dark);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin-right: 8px;
+      display: inline-block;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER (Same as dashboard) -->
+
+ <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            
+
+        </div>
+    </header>
+
+
+
+  <!-- MAIN CONTENT -->
+  <main class="admin-container">
+    <div class="back-button">
+        <a href="dashboard.html"><i class="fa-solid fa-arrow-left"></i> Back to dashboard</a>
+    </div>
+    <h1>Manage Movies & Genres</h1>
+    <p class="small-muted" style="margin-bottom:14px;">
+  Add, delete or edit movies, update metadata, manage genres, and upload posters.
+</p>
+
+
+
+    <!-- ===========================
+          MOVIES LIST
+    ============================ -->
+    <section class="panel">
+      <h2>Movies List</h2>
+
+      <table class="movie-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th>Year</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Interstellar</td>
+            <td>Sci-Fi</td>
+            <td>Christopher Nolan</td>
+            <td>2014</td>
+            <td>
+              <a class="btn-light" href="#editMovie">Edit</a>
+              <a class="btn-danger" href="#">Delete</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>102</td>
+            <td>The Dark Knight</td>
+            <td>Action</td>
+            <td>Christopher Nolan</td>
+            <td>2008</td>
+            <td>
+              <a class="btn-light" href="#editMovie">Edit</a>
+              <a class="btn-danger" href="#">Delete</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===========================
+          ADD NEW MOVIE
+    ============================ -->
+    <section class="panel" id="addMovie">
+      <h2>Add New Movie</h2>
+
+      <div class="input-row">
+        <input type="text" placeholder="Movie Title">
+        <input type="text" placeholder="Director">
+        <input type="text" placeholder="Release Year">
+      </div>
+
+      <div class="input-row">
+        <select>
+          <option selected>Select Genre</option>
+          <option>Action</option>
+          <option>Drama</option>
+          <option>Comedy</option>
+          <option>Sci-Fi</option>
+        </select>
+
+        <input type="file" accept="image/*">
+      </div>
+
+      <textarea placeholder="Movie Description..."></textarea>
+
+      <a class="btn-primary" href="#">Add Movie</a>
+    </section>
+
+    <!-- ===========================
+          UPDATE / EDIT MOVIE
+    ============================ -->
+    <section class="panel" id="editMovie">
+      <h2>Edit / Update Movie</h2>
+
+      <div class="input-row">
+        <input type="text" placeholder="Movie Title (Edit)">
+        <input type="text" placeholder="Director (Edit)">
+        <input type="text" placeholder="Release Year (Edit)">
+      </div>
+
+      <div class="input-row">
+        <select>
+          <option selected>Select Genre</option>
+          <option>Action</option>
+          <option>Drama</option>
+          <option>Comedy</option>
+          <option>Sci-Fi</option>
+        </select>
+
+        <input type="file" accept="image/*">
+      </div>
+
+      <textarea placeholder="Update description..."></textarea>
+
+      <a class="btn-primary" href="#">Save Changes</a>
+    </section>
+
+    <!-- ===========================
+          GENRE MANAGEMENT
+    ============================ -->
+    <section class="panel">
+      <h2>Manage Genres</h2>
+
+      <p class="small-muted" style="margin-bottom:10px;">Existing Genres:</p>
+      <p>
+        <span class="genre-tag">Action</span>
+        <span class="genre-tag">Drama</span>
+        <span class="genre-tag">Comedy</span>
+        <span class="genre-tag">Sci-Fi</span>
+        <span class="genre-tag">Romance</span>
+      </p>
+
+      <hr class="section-divider">
+
+      <div class="input-row">
+        <input type="text" placeholder="Add new genre...">
+        <a class="btn-primary" href="#">Add Genre</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie Community. Admin Tools | Cine Nest</p>
+  </footer>
+
+  <script>
+    // If you want to reuse date like dashboard:
+    // document.getElementById('todayDate').innerText = new Date().toLocaleDateString();
+  </script>
+
+</body>
+</html>
+

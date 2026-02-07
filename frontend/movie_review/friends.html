@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Cine Nest</title>
+    <link rel="stylesheet" href="home.css"> <!-- reuse home.css for header/colors -->
+    <link rel="stylesheet" href="friends.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Cine Nest Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="forum.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html" class="active">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search friends..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Back to Profile -->
+    <div class="back-button">
+        <a href="profile.html"><i class="fa-solid fa-arrow-left"></i> Back to Profile</a>
+    </div>
+
+
+
+    <!-- Friends Section -->
+    <section class="friends-section">
+        <h2>All Friends</h2>
+        <div class="friends-grid">
+            <div class="friend-card">
+                <img src="photos/friend1.jpg" alt="Sarah">
+                <span>Sarah</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=Sarah'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+            <div class="friend-card">
+                <img src="photos/friend2.jpg" alt="Ali">
+                <span>Ali</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=Ali'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+            <div class="friend-card">
+                <img src="photos/friend3.jpg" alt="Zara">
+                <span>Zara</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=Zara'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+            <div class="friend-card">
+                <img src="photos/friend4.jpg" alt="Hamza">
+                <span>Hamza</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=Hamza'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+            <div class="friend-card">
+                <img src="photos/friend5.jpg" alt="John">
+                <span>John</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=John'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+            <div class="friend-card">
+                <img src="photos/friend6.jpg" alt="Lara">
+                <span>Lara</span>
+                <button class="msg-btn" onclick="location.href='dm.html?friend=Lara'">
+                    <i class="fa-solid fa-message"></i> Message
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Friend Requests Section -->
+    <section class="friends-section">
+        <h2>Friend Requests</h2>
+        <div class="friends-grid">
+            <div class="friend-card request-card">
+                <img src="photos/friend1.jpg" alt="Sarah Khan">
+                <span>Sarah Khan</span>
+                <div class="request-actions">
+                    <button class="accept">Accept</button>
+                    <button class="decline">Decline</button>
+                </div>
+            </div>
+            <div class="friend-card request-card">
+                <img src="photos/friend2.jpg" alt="Ali">
+                <span>Ali</span>
+                <div class="request-actions">
+                    <button class="accept">Accept</button>
+                    <button class="decline">Decline</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

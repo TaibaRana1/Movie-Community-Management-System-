@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Movies - Cine Nest</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><!-- SAME STYLE AS HOME PAGE -->
+    <link rel="stylesheet" href="genre.css">
+</head>
+
+<body>
+
+<!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            
+
+        </div>
+    </header>
+
+    <section class="movies-section">
+        <h2>Horror Movies </h2>
+         <div class="back-button">
+            <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterMovies('all', event)">All</button>
+            <button class="filter-btn" onclick="filterMovies('recent', event)">Recent</button>
+            <button class="filter-btn" onclick="filterMovies('classic', event)">Classics</button>
+        </div>
+
+        <div class="movies-grid">
+
+            <div class="movie-card" data-category="recent">
+                <img src="photos/h1.jpg" alt="">
+                <h3>Scary Movie 1</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+
+            <div class="movie-card" data-category="recent">
+                <img src="photos/h2.jpg" alt="">
+                <h3>Night Terror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h3.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+
+            <div class="movie-card" data-category="all">
+                <img src="photos/h4.jpg" alt="">
+                <h3>Dark Shadow</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h5.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h6.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h7.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h8.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+            <div class="movie-card" data-category="classic">
+                <img src="photos/h9.jpg" alt="">
+                <h3>Classic Horror</h3>
+                <a href="movie-discussion.html?movie_id=123" class="discussion-btn">Open discussion</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+    </footer>
+
+ 
+
+</body>
+
+</html>

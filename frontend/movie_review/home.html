@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Community - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="auth-buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="signup.html" class="btn signup-btn">Sign Up</a>
+           
+        </div>
+
+        </div>
+    </header>
+
+
+    <!-- Main Slider -->
+    <section class="slider">
+        <button class="slide-btn left" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="slides-container" id="slides-container">
+            <div class="slide">
+                <img src="photos/slider.jpg" alt="Spider-Man: Across the Spiderverse">
+                <div class="slide-info">
+                    <h2 style="font-size:16px;">Spider-Man: Across the Spiderverse</h2>
+                    <div class="slide-desc">
+                        Join Miles Morales as he swings through multiple dimensions in this action-packed animated
+                        adventure filled with heart, humor, and breathtaking visuals.
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="photos/slider-bg2.jpg" alt="Oppenheimer">
+                <div class="slide-info">
+                    <h2 style="font-size:16px;">Oppenheimer</h2>
+                    <div class="slide-desc">
+                        Experience the thrilling story of J. Robert Oppenheimer, the scientist behind the atomic bomb,
+                        as history unfolds in a gripping biographical drama.
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="photos/slider-bg3.jpg" alt="The Batman">
+                <div class="slide-info">
+                    <h2 style="font-size:16px;">The Batman</h2>
+                    <div class="slide-desc">
+                        Gotham’s dark knight returns in a suspenseful crime thriller, uncovering corruption and facing
+                        enemies in a city that never sleeps.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="slide-btn right" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </section>
+
+
+
+
+
+<!-- Trending Movies Section -->
+<section class="movies-section" id="trending">
+    <h2>
+        Trending Movies
+        <span class="arrow" onclick="location.href='trending.html'">➜</span>
+    </h2>
+
+    <div class="movies-grid">
+        <div class="movie-card" >
+            <img src="photos/mv1.jpg" alt="Avengers: Endgame">
+            <h3>Avengers: Endgame</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.4</span>
+                <span><i class="fa-solid fa-eye"></i> 1.2M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv2.jpg" alt="The Batman">
+            <h3>The Batman</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.7</span>
+                <span><i class="fa-solid fa-eye"></i> 980K</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv3.jpg" alt="Joker">
+            <h3>Joker</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.6</span>
+                <span><i class="fa-solid fa-eye"></i> 1.1M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv4.jpg" alt="Oppenheimer">
+            <h3>Oppenheimer</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.3</span>
+                <span><i class="fa-solid fa-eye"></i> 750K</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv5.jpg" alt="Spider-Man: No Way Home">
+            <h3>Spider-Man: No Way Home</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.2</span>
+                <span><i class="fa-solid fa-eye"></i> 1.5M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv6.jpg" alt="Black Panther: Wakanda Forever">
+            <h3>Black Panther: Wakanda Forever</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 7.9</span>
+                <span><i class="fa-solid fa-eye"></i> 820K</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Top Rated Movies Section -->
+<section class="movies-section" id="toprated">
+    <h2>Top Rated Movies
+        <span class="arrow" onclick="location.href='toprated.html'">➜</span>
+    </h2>
+    <div class="movies-grid">
+        <div class="movie-card" >
+            <img src="photos/mv-it6.jpg" alt="The Shawshank Redemption">
+            <h3>The Shawshank Redemption</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 9.3</span>
+                <span><i class="fa-solid fa-eye"></i> 2.3M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv-it7.jpg" alt="The Godfather">
+            <h3>The Godfather</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 9.2</span>
+                <span><i class="fa-solid fa-eye"></i> 1.9M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv-it8.jpg" alt="The Dark Knight">
+            <h3>The Dark Knight</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 9.0</span>
+                <span><i class="fa-solid fa-eye"></i> 2.1M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv-it9.jpg" alt="Pulp Fiction">
+            <h3>Pulp Fiction</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.9</span>
+                <span><i class="fa-solid fa-eye"></i> 1.8M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv-it10.jpg" alt="Inception">
+            <h3>Inception</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.8</span>
+                <span><i class="fa-solid fa-eye"></i> 2.0M</span>
+            </div>
+        </div>
+        <div class="movie-card" >
+            <img src="photos/mv-it11.jpg" alt="Fight Club">
+            <h3>Fight Club</h3>
+            <div class="movie-info">
+                <span><i class="fa-solid fa-star"></i> 8.8</span>
+                <span><i class="fa-solid fa-eye"></i> 1.7M</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Movie Community. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

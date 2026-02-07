@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Community - Browse Movies</title>
+<link rel="stylesheet" href="movie.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+
+ <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="auth-buttons">
+          
+            <a href="profile.html" class="btn profile-btn"><i class="fa-solid fa-user"></i> Profile</a>
+        </div>
+
+        </div>
+    </header>
+
+
+   
+
+<!-- Filters Section -->
+<section class="filters-section">
+    <div class="back-button">
+        <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+    </div>
+    <h1>Browse Movies</h1>
+    <div class="filters">
+    <!-- Search by title -->
+    <div class="input-icon">
+        <input type="text" placeholder="Search by title" class="search-title">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <!-- Genre -->
+    <div class="select-icon">
+        <select id="genre-select">
+            <option value="">Genre</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+            <option value="sci-fi">Sci-Fi</option>
+        </select>
+        <i class="fa-solid fa-film"></i>
+    </div>
+
+    <!-- Rating -->
+    <div class="select-icon">
+        <select>
+            <option value="">Rating</option>
+            <option>9+</option>
+            <option>8+</option>
+            <option>7+</option>
+            <option>6+</option>
+        </select>
+        <i class="fa-solid fa-star"></i>
+    </div>
+
+    <!-- Year -->
+    <div class="select-icon">
+        <select>
+            <option value="">Year</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+        </select>
+        <i class="fa-solid fa-calendar"></i>
+    </div>
+</div>
+
+</section>
+
+<!-- Movies Grid -->
+<section class="movies-grid">
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item1.jpg" alt="Avengers: Endgame">
+        <h3>Avengers: Endgame</h3>
+        <p>Action | 2019</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item2.jpg" alt="The Hangover">
+        <h3>The Hangover</h3>
+        <p>Comedy | 2009</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item3.jpg" alt="The Godfather">
+        <h3>The Godfather</h3>
+        <p>Drama | 1972</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item4.jpg" alt="It">
+        <h3>It</h3>
+        <p>Horror | 2017</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item5.jpg" alt="Interstellar">
+        <h3>Interstellar</h3>
+        <p>Sci-Fi | 2014</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item6.jpg" alt="Mad Max: Fury Road">
+        <h3>Mad Max: Fury Road</h3>
+        <p>Action | 2015</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item7.jpg" alt="Superbad">
+        <h3>Superbad</h3>
+        <p>Comedy | 2007</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item8.jpg" alt="Forrest Gump">
+        <h3>Forrest Gump</h3>
+        <p>Drama | 1994</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item9.jpg" alt="A Quiet Place">
+        <h3>A Quiet Place</h3>
+        <p>Horror | 2018</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item10.jpg" alt="The Matrix">
+        <h3>The Matrix</h3>
+        <p>Sci-Fi | 1999</p>
+    </a>
+   
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item11.jpg" alt="Inception">
+        <h3>Inception</h3>
+        <p>Sci-Fi | 2010</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item12.jpg" alt="Joker">
+        <h3>Joker</h3>
+        <p>Drama | 2019</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item13.jpg" alt="Parasite">
+        <h3>Parasite</h3>
+        <p>Thriller | 2019</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item14.jpg" alt="The Lion King">
+        <h3>The Lion King</h3>
+        <p>Animation | 2019</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item15.jfif" alt="Frozen">
+        <h3>Frozen</h3>
+        <p>Animation | 2013</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item16.jpg" alt="Black Panther">
+        <h3>Black Panther</h3>
+        <p>Action | 2018</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item17.jfif" alt="The Dark Knight">
+        <h3>The Dark Knight</h3>
+        <p>Action | 2008</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item18.jfif" alt="Coco">
+        <h3>Coco</h3>
+        <p>Animation | 2017</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item19.jpeg" alt="Shutter Island">
+        <h3>Shutter Island</h3>
+        <p>Thriller | 2010</p>
+    </a>
+    <a href="movie_detail.html" class="movie-card">
+        <img src="photos/mv-item20.jpg" alt="Guardians of the Galaxy">
+        <h3>Guardians of the Galaxy</h3>
+        <p>Action | 2014</p>
+    </a>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

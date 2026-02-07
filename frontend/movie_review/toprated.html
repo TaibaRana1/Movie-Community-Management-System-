@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Nest - Top Rated</title>
+    <link rel="stylesheet" href="toprated.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Header -->
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                             <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+   
+<!-- Top Rated Section -->
+<section class="movies-section">
+    <div class="back-button">   
+        <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>  
+    </div>
+    <h1>Top Rated Movies</h1>
+
+    <!-- Rom-Com -->
+    <h2 class="category-title">Rom-Com</h2>
+    <div class="movies-grid">
+        <div class="movie-card">
+            <img src="photos/romcom1.jfif" alt="Movie Poster">
+            <h3>Bride Wars</h3>
+            <p><i class="fa-solid fa-star"></i> 7.9</p>
+            <p>Rom-Com | 2018</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/romcom2.jpg" alt="Movie Poster">
+            <h3>Love Actually</h3>
+            <p><i class="fa-solid fa-star"></i> 7.6</p>
+            <p>Rom-Com | 2003</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/romcom3.jpg" alt="Movie Poster">
+            <h3>10 Things I Hate About You</h3>
+            <p><i class="fa-solid fa-star"></i> 7.3</p>
+            <p>Rom-Com | 1999</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/romcom4.jpg" alt="Movie Poster">
+            <h3>The Proposal</h3>
+            <p><i class="fa-solid fa-star"></i> 6.7</p>
+            <p>Rom-Com | 2009</p>
+        </div>
+    </div>
+
+    <!-- Thriller -->
+    <h2 class="category-title">Thriller</h2>
+    <div class="movies-grid">
+        <div class="movie-card">
+            <img src="photos/thriller1.jfif" alt="Movie Poster">
+            <h3>Gone Girl</h3>
+            <p><i class="fa-solid fa-star"></i> 8.1</p>
+            <p>Thriller | 2014</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/thriller4.jfif" alt="Movie Poster">
+            <h3>Se7en</h3>
+            <p><i class="fa-solid fa-star"></i> 8.6</p>
+            <p>Thriller | 1995</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/thriller2.jpg" alt="Movie Poster">
+            <h3>Prisoners</h3>
+            <p><i class="fa-solid fa-star"></i> 8.1</p>
+            <p>Thriller | 2013</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/thriller3.jfif" alt="Movie Poster">
+            <h3>Shutter Island</h3>
+            <p><i class="fa-solid fa-star"></i> 8.2</p>
+            <p>Thriller | 2010</p>
+        </div>
+    </div>
+
+    <!-- Horror -->
+    <h2 class="category-title">Horror</h2>
+    <div class="movies-grid">
+        <div class="movie-card">
+            <img src="photos/horror1.jfif" alt="Movie Poster">
+            <h3>The Conjuring</h3>
+            <p><i class="fa-solid fa-star"></i> 7.5</p>
+            <p>Horror | 2013</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/horror2.jfif" alt="Movie Poster">
+            <h3>It</h3>
+            <p><i class="fa-solid fa-star"></i> 7.3</p>
+            <p>Horror | 2017</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/horror3.jpg" alt="Movie Poster">
+            <h3>A Quiet Place</h3>
+            <p><i class="fa-solid fa-star"></i> 7.5</p>
+            <p>Horror | 2018</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/horror4.jpg" alt="Movie Poster">
+            <h3>Get Out</h3>
+            <p><i class="fa-solid fa-star"></i> 7.7</p>
+            <p>Horror | 2017</p>
+        </div>
+    </div>
+
+    <!-- Adventure -->
+    <h2 class="category-title">Adventure</h2>
+    <div class="movies-grid">
+        <div class="movie-card">
+            <img src="photos/adventure1.jfif" alt="Movie Poster">
+            <h3>Interstellar</h3>
+            <p><i class="fa-solid fa-star"></i> 8.6</p>
+            <p>Adventure | 2014</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/adventure2.jpg" alt="Movie Poster">
+            <h3>The Lord of the Rings</h3>
+            <p><i class="fa-solid fa-star"></i> 8.8</p>
+            <p>Adventure | 2001</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/adventure3.jfif" alt="Movie Poster">
+            <h3>Gladiator</h3>
+            <p><i class="fa-solid fa-star"></i> 8.5</p>
+            <p>Adventure | 2000</p>
+        </div>
+        <div class="movie-card">
+            <img src="photos/adventure4.jfif" alt="Movie Poster">
+            <h3>Jurassic Park</h3>
+            <p><i class="fa-solid fa-star"></i> 8.1</p>
+            <p>Adventure | 1993</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 Cine Nest. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

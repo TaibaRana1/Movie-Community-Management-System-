@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cine Nest - Events</title>
+<link rel="stylesheet" href="events.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Header -->
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+          
+        </div>
+    </header>
+
+   
+
+<!-- Main Content -->
+<section class="events-section">
+     <div class="back-button">
+        <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+    </div>
+    <h1>Upcoming Events</h1>
+     <a href="create_event.html" class="btn create-event-btn">+ Create Event</a>
+
+    <div class="event-card">
+        <h2>Movie Night: Spiderverse</h2>
+        <p><strong>Host:</strong> CineNest Community</p>
+        <p><strong>Date/Time:</strong> 20th Nov 2025, 7:00 PM</p>
+        <p><strong>Capacity:</strong> 50 seats</p>
+        <p><strong>Description:</strong> Join us for an exciting evening watching Spiderverse with fellow movie lovers!</p>
+        <a href="event_detail.html" class="btn">View Details</a>
+        <a href="#" class="btn join-btn">Join Event</a>
+    </div>
+
+    <div class="event-card">
+        <h2>Marvel Movie Marathon</h2>
+        <p><strong>Host:</strong> CineNest Admin</p>
+        <p><strong>Date/Time:</strong> 25th Nov 2025, 5:00 PM</p>
+        <p><strong>Capacity:</strong> 100 seats</p>
+        <p><strong>Description:</strong> Binge-watch all Marvel movies in one fun-filled marathon evening.</p>
+        <a href="event_detail.html" class="btn">View Details</a>
+        <a href="#" class="btn join-btn">Join Event</a>
+    </div>
+
+    <div class="event-card">
+        <h2>Animated Classics Night</h2>
+        <p><strong>Host:</strong> CineNest Team</p>
+        <p><strong>Date/Time:</strong> 28th Nov 2025, 6:30 PM</p>
+        <p><strong>Capacity:</strong> 60 seats</p>
+        <p><strong>Description:</strong> Enjoy a nostalgic evening with all-time favorite animated movies.</p>
+        <a href="event_detail.html" class="btn">View Details</a>
+        <a href="#" class="btn join-btn">Join Event</a>
+    </div>
+
+  
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

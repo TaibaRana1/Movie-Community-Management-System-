@@ -1,0 +1,263 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+    --primary: #561c24;
+    --secondary: #c7b7a3;
+    --accent-dark: #6d2932;
+    --accent-light: #e8d8c4;
+    --white: #ffffff;
+}
+
+/* Body */
+body {
+    background-color: var(--accent-light);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Adjust flex in header */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* spacing from nav */
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.search-box button {
+    background-color: var(--accent-light); /* same as signup button */
+    color: var(--primary);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 6px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.search-box button:hover {
+    background-color: var(--accent-dark);
+    color: var(--white);
+}
+
+/* Optional: icon spacing */
+.search-box button i {
+    font-size: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Back Button */
+.back-button {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #561c24;
+    background: #fdf6e3;
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-button a:hover {
+    background: #561c24;
+    color: white;
+}
+
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-light);
+}
+
+/* Dropdown */
+
+.nav-links li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #c7b7a3;
+    width: fit-content;          
+    white-space: nowrap;      
+    padding: 0;
+    border-radius: 5px;
+    z-index: 999;
+}
+.dropdown-content li {
+    padding: 8px 12px;
+    width: 100%;
+}
+.dropdown-content li a {
+    color: #561c24 !important;   
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;              /* keep open */
+}
+
+
+/* Auth buttons */
+.auth-buttons a {
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.login-btn {
+    background-color: var(--accent-dark);
+    color: var(--white);
+}
+
+.login-btn:hover {
+    background-color: var(--accent-light);
+    color: var(--primary);
+}
+
+.signup-btn {
+    background-color: var(--accent-light);
+    color: var(--primary);
+}
+
+.signup-btn:hover {
+    background-color: var(--accent-dark);
+    color: var(--white);
+}
+/* Event Details Section */
+.event-details {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding-bottom: 40px;
+}
+
+.event-details h2 {
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.details-box {
+    background: var(--white);
+    padding: 20px;
+    border-left: 6px solid var(--accent-dark);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.participants-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.participants-list li {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.join-btn {
+    background: var(--accent-dark);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.join-btn:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--primary);
+    color: var(--white);
+    margin-top: 40px;
+}

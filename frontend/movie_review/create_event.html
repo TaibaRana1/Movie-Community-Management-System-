@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - Cine Nest</title>
+    <link rel="stylesheet" href="create_event.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+         
+        </div>
+    </header>
+
+<section class="create-event">
+    <div class="back-button">
+        <a href="events.html"><i class="fa-solid fa-arrow-left"></i> Back to Events</a>
+    </div>  
+    <h2>Create a new Event</h2>
+
+    <form class="event-form">
+        <label>Event Title</label>
+        <input type="text" placeholder="Enter title">
+
+        <label>Select Movie</label>
+        <select>
+            <option>Select Movie</option>
+            <option>Avengers: Endgame</option>
+            <option>Inception</option>
+            <option>The Dark Knight</option>
+            <option>Interstellar</option>
+        </select>
+
+        <label>Date & Time</label>
+        <input type="datetime-local">
+
+        <label>Capacity</label>
+        <input type="number" min="1" placeholder="Enter capacity">
+
+        <label>Description</label>
+        <textarea placeholder="Event description"></textarea>
+
+        <button type="submit" class="submit-btn">Create Event</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

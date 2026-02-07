@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion - Cine Nest</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Movie Discussion</title>
+    <style>
+        body {
+            background: #f3e9dd;
+            /* soft beige */
+            color: #402a23;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            background: #d6c7b2;
+            color: #402a23;
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #b8a991;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        h2 span {
+            color: #b14a3b;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 15px;
+            background: #fafafa;
+            border: 1px solid #d6ccc2;
+        }
+
+        textarea:focus {
+            outline: none;
+            border: 1px solid #b14a3b;
+        }
+
+        button {
+            background: #b14a3b;
+            border: none;
+            padding: 10px 18px;
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #8c382c;
+        }
+
+        .post-box {
+            background: #fff5ea;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #e3d5ca;
+        }
+
+        .post-header {
+            font-size: 14px;
+            color: #6d5c54;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            margin-top: 15px;
+            color: #402a23;
+        }
+
+        .comment-box {
+            background: #f7ede2;
+            padding: 12px;
+            border-left: 4px solid #b14a3b;
+            border-radius: 6px;
+            margin: 10px 0 15px 20px;
+        }
+
+        .delete-btn {
+            background: #a10000;
+        }
+
+        .delete-btn:hover {
+            background: #7a0000;
+        }
+
+        a {
+            color: #b14a3b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .like-btn {
+            background: #dc6b3d;
+            margin-right: 10px;
+        }
+
+        .like-btn:hover {
+            background: #b75c31;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- BACK BUTTON -->
+        <a href="genre-action.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+        <h2>Discussion: <span>Movie Title</span></h2>
+
+        <!-- ADD NEW POST -->
+        <form method="POST" action="add_post.php">
+            <input type="hidden" name="movie_id" value="MOVIE_ID">
+            <textarea name="content" rows="3" placeholder="Share your thoughts..."></textarea>
+            <br>
+            <button type="submit">Post</button>
+        </form>
+
+        <hr>
+
+        <!-- POST CARD -->
+        <div class="post-box">
+            <div class="post-header">
+                <b>Username</b> • Posted on 2025-01-15
+            </div>
+
+            <p>Great movie! The story was amazing.</p>
+
+            <form method="POST" action="like_post.php" style="display:inline;">
+                <input type="hidden" name="post_id" value="POST_ID">
+                <button class="like-btn"> Like (5)</button>
+            </form>
+
+            <form method="POST" action="delete_post.php" style="display:inline;">
+                <input type="hidden" name="post_id" value="POST_ID">
+                <button class="delete-btn">Delete</button>
+            </form>
+
+            <h4>Comments:</h4>
+
+            <div class="comment-box">
+                <p><b>User A:</b> I agree with you!</p>
+            </div>
+
+            <form method="POST" action="add_comment.php">
+                <input type="hidden" name="post_id" value="POST_ID">
+                <textarea name="comment" rows="2" placeholder="Write a comment..."></textarea>
+                <br><button type="submit">Comment</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

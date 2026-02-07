@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Cine Nest</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Logo -->
+                <img src="photos/logo.jpg" alt="Cine Nest Logo">
+
+
+
+
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="dm.html">Messages</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    
+
+    <!-- Profile Header -->
+    <section class="profile-header">
+        <img src="photos/profile.jpg" alt="John Doe Profile Picture" class="profile-pic">
+
+        <div class="user-info">
+            <h2>John Doe</h2>
+            <p class="bio">Movie enthusiast • Loves horror, sci-fi, thrillers</p>
+
+            <div class="stats">
+                <div><a href="history.html" class="num-link"><span class="num">56</span> Completed</a></div>
+                <div><a href="friends.html" class="num-link"><span class="num">14</span> Friends</a></div>
+                <div><span class="num">9</span> Reviews</div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Back to Home Button -->
+    <div class="back-button">
+        <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <a href="profile.html" class="tab active">Overview</a>
+        <a href="history.html" class="tab">History</a>
+        <a href="watchlist.html" class="tab">Watchlist</a>
+        <a href="friends.html" class="tab">Friends</a>
+        <a href="reviews.html" class="tab">Reviews</a>
+        <a href="notifications.html" class="tab">Notifications</a> <!-- NEW TAB -->
+
+
+    </div>
+
+    <!-- Main Content -->
+    <section class="content">
+
+        <!-- Recently Completed -->
+        <div class="section-block">
+            <div class="section-title">
+                <h3>Recently Completed</h3>
+                <span class="arrow" onclick="location.href='history.html'">➜</span>
+            </div>
+
+            <div class="movie-row">
+                <div class="movie-card">
+                    <img src="photos/mv1.jpg" alt="Movie 1">
+                    <h3>Movie 1</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv2.jpg" alt="Movie 2">
+                    <h3>Movie 2</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv3.jpg" alt="Movie 3">
+                    <h3>Movie 3</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv4.jpg" alt="Movie 4">
+                    <h3>Movie 4</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watchlist -->
+        <div class="section-block">
+            <div class="section-title">
+                <h3>Watchlist</h3>
+                <span class="arrow" onclick="location.href='watchlist.html'">➜</span>
+            </div>
+
+            <div class="movie-row">
+                <div class="movie-card">
+                    <img src="photos/mv5.jpg" alt="Movie 5">
+                    <h3>Movie 5</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv6.jpg" alt="Movie 6">
+                    <h3>Movie 6</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv7.jpg" alt="Movie 7">
+                    <h3>Movie 7</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="photos/mv8.jpg" alt="Movie 8">
+                    <h3>Movie 8</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friends Preview -->
+        <div class="section-block">
+            <div class="section-title">
+                <h3>Friends</h3>
+                <span class="arrow" onclick="location.href='friends.html'">➜</span>
+            </div>
+
+            <div class="friends-grid">
+                <div class="friend-preview">
+                    <img src="photos/friend1.jpg" alt="Sarah">
+                    <span>Sarah</span>
+                </div>
+                <div class="friend-preview">
+                    <img src="photos/friend2.jpg" alt="Ali">
+                    <span>Ali</span>
+                </div>
+                <div class="friend-preview">
+                    <img src="photos/friend4.jpg" alt="Hamza">
+                    <span>Hamza</span>
+                </div>
+                <div class="friend-preview">
+                    <img src="photos/friend3.jpg" alt="Zara">
+                    <span>Zara</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

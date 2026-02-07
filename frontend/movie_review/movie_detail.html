@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="movie_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Genres</a>
+                        <ul class="dropdown-content">
+                            <li><a href="genre-action.html">Action</a></li>
+                            <li><a href="genre-comedy.html">Comedy</a></li>
+                            <li><a href="genre-horror.html">Horror</a></li>
+                            <li><a href="genre-sci-fi.html">Sci-Fi</a></li>
+                            <li><a href="genre-romance.html">Romance</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN MOVIE DETAILS SECTION -->
+     <div class="back-button">
+            <a href="movie.html"><i class="fa-solid fa-arrow-left"></i> Back to Movies</a>  
+        </div>
+    <section class="movie-container">
+       
+        <div class="poster-box">
+            <img src="photos/poster1.jpg" alt="Movie Poster">
+        </div>
+
+        <div class="movie-info">
+            <h1 class="movie-title">Guardians of the Galaxy</h1>
+
+            <p class="movie-meta">
+                <span><i class="fa-solid fa-calendar"></i> 2024</span>
+                <span><i class="fa-solid fa-film"></i> Action, Adventure</span>
+                <span><i class="fa-solid fa-star"></i> 8.5/10</span>
+            </p>
+
+            <div class="synopsis-box">
+                <h3>Synopsis</h3>
+                <p>
+                   In the first Guardians of the Galaxy film, a group of intergalactic outlaws and misfits form an uneasy alliance after discovering the power of a mysterious orb coveted by a fanatical villain. They must overcome their differences to prevent the villain from using the artifact's immense power to destroy the universe. 
+                </p>
+            </div>
+
+            <button class="like-btn"><i class="fa-solid fa-heart"></i> Like</button>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section">
+        <h2>Reviews & Ratings</h2>
+
+        <div class="review">
+            <p class="review-user"><i class="fa-solid fa-user"></i> Ali</p>
+            <p class="review-text">
+                Amazing movie! The storyline was strong and visuals were stunning.
+            </p>
+            <p class="review-rating"><i class="fa-solid fa-star"></i> 9/10</p>
+        </div>
+
+        <div class="review">
+            <p class="review-user"><i class="fa-solid fa-user"></i> Sara</p>
+            <p class="review-text">
+                Good acting and direction, but pacing was a bit slow.
+            </p>
+            <p class="review-rating"><i class="fa-solid fa-star"></i> 7/10</p>
+        </div>
+
+    </section>
+
+    <!-- DISCUSSION SECTION -->
+    <section class="discussion-section">
+        <h2>Discussion</h2>
+
+        <div class="post">
+            <p class="post-user"><i class="fa-solid fa-user-pen"></i> Ahmed</p>
+            <p class="post-text">What did you think about the ending?</p>
+        </div>
+
+        <div class="post">
+            <p class="post-user"><i class="fa-solid fa-user-pen"></i> Noor</p>
+            <p class="post-text">Loved the character development!</p>
+        </div>
+
+        <textarea class="comment-box" placeholder="Write your comment..."></textarea>
+        <button class="comment-btn">Post</button>
+    </section>
+
+</body>
+</html>

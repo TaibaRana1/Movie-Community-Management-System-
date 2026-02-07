@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Movies - Cine Nest</title>
+<link rel="stylesheet" href="trending.css">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Header -->
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="photos/logo.jpg" alt="Movie Community Logo">
+                <span class="site-name">Cine Nest</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Movies</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie.html">Browse Movies</a></li>
+                            <li><a href="trending.html">Trending</a></li>
+                            <li><a href="toprated.html">Top Rated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community</a>
+                        <ul class="dropdown-content">
+                            <li><a href="movie-discussion.html">Discussions</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search movies..." id="search-input">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+   
+
+<!-- Trending Movies Carousel -->
+<section class="movies-section">
+    <div class="back-button">   
+        <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+    </div>
+    <h1>Trending Movies</h1>
+
+    <div class="carousel-container">
+        <div class="carousel-track">
+
+            <!-- Movie Card 1 -->
+            <div class="movie-card">
+                <img src="photos/mv1.jpg" alt="Spider-Man">
+                <h3>Spider-Man: Across the Spiderverse</h3>
+                <p>2023 • Rating: <i class="fa-solid fa-star"></i> 9.1</p>
+                <p><i class="fa-solid fa-heart"></i> 12k &nbsp; <i class="fa-solid fa-eye"></i> 20k</p>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="movie-card">
+                <img src="photos/mv2.jpg" alt="Oppenheimer">
+                <h3>Oppenheimer</h3>
+                <p>2023 • Rating: <i class="fa-solid fa-star"></i> 9.0</p>
+                <p><i class="fa-solid fa-heart"></i> 15k &nbsp; <i class="fa-solid fa-eye"></i> 25k</p>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="movie-card">
+                <img src="photos/mv3.jpg" alt="The Batman">
+                <h3>The Batman</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 8.4</p>
+                <p><i class="fa-solid fa-heart"></i> 10k &nbsp; <i class="fa-solid fa-eye"></i> 18k</p>
+            </div>
+
+            <!-- Movie Card 4 -->
+            <div class="movie-card">
+                <img src="photos/mv4.jpg" alt="Avatar">
+                <h3>Avatar: The Way of Water</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 8.0</p>
+                <p><i class="fa-solid fa-heart"></i> 9k &nbsp; <i class="fa-solid fa-eye"></i> 16k</p>
+            </div>
+
+            <!-- Movie Card 5 -->
+            <div class="movie-card">
+                <img src="photos/mv5.jpg" alt="Black Panther">
+                <h3>Black Panther: Wakanda Forever</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 7.9</p>
+                <p><i class="fa-solid fa-heart"></i> 8k &nbsp; <i class="fa-solid fa-eye"></i> 14k</p>
+            </div>
+
+            <!-- Movie Card 6 -->
+            <div class="movie-card">
+                <img src="photos/mv6.jpg" alt="Doctor Strange">
+                <h3>Doctor Strange in the Multiverse</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 7.8</p>
+                <p><i class="fa-solid fa-heart"></i> 7k &nbsp; <i class="fa-solid fa-eye"></i> 12k</p>
+            </div>
+
+            <!-- Movie Card 7 -->
+            <div class="movie-card">
+                <img src="photos/mv7.jpg" alt="Thor">
+                <h3>Thor: Love and Thunder</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 7.5</p>
+                <p><i class="fa-solid fa-heart"></i> 6k &nbsp; <i class="fa-solid fa-eye"></i> 10k</p>
+            </div>
+
+            <!-- Movie Card 8 -->
+            <div class="movie-card">
+                <img src="photos/mv8.jpg" alt="Jurassic World">
+                <h3>Jurassic World: Dominion</h3>
+                <p>2022 • Rating: <i class="fa-solid fa-star"></i> 7.3</p>
+                <p><i class="fa-solid fa-heart"></i> 5k &nbsp; <i class="fa-solid fa-eye"></i> 9k</p>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Cine Nest. All Rights Reserved.</p>
+</footer>
+
+<script src="trending.js"></script>
+</body>
+</html>
